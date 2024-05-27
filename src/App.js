@@ -3,7 +3,7 @@ import Board from './components/Board';
 import Modal from './components/Modal';
 
 const App = () => {
-    const [numImages, setNumImages] = useState(4);
+    const [numImages, setNumImages] = useState(7);
     const [showModal, setShowModal] = useState(false);
     const [gameKey, setGameKey] = useState(0); // Nuevo estado para forzar un reinicio
 
