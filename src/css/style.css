@@ -17,7 +17,7 @@ body {
 .scoreboard {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 400px;
   margin-bottom: 20px;
   font-size: 18px;
 }

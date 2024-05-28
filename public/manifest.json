@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Matching Game",
+  "name": "Image Matching Game",
   "icons": [
     {
       "src": "favicon.ico",
