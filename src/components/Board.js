@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Card from './Card';
 
 const fetchCatImages = async (count) => {
-    const response = await fetch(`https://api.pexels.com/v1/search?query=cat&per_page=${count}`, {
+    const categories = ['cat', 'dog', 'nature', 'city'];
+    const category = categories[Math.floor(Math.random() * categories.length)];
+    const response = await fetch(`https://api.pexels.com/v1/search?query=${category}&per_page=${count}`, {
         headers: {
             Authorization: 'iK5NvDLyZmmtOCkdSyujIel8g8LmKIRKRdSPZKiE2o2OqXvcrmW4mZ9u'
         }
@@ -11,7 +13,7 @@ const fetchCatImages = async (count) => {
     return data.photos.map(photo => photo.src.medium);
 };
 
-const Board = ({ numImages, onEndGame }) => {
+const Board = ({ numImages, onEndGame, setScore }) => {
     const [cards, setCards] = useState([]);
     const [flipped, setFlipped] = useState([]);
     const [matched, setMatched] = useState([]);
@@ -44,6 +46,9 @@ const Board = ({ numImages, onEndGame }) => {
         if (flippedCards.length === 2) {
             if (flippedCards[0].image === flippedCards[1].image) {
                 setMatched([...matched, flippedCards[0].image]);
+                setScore(prevScore => prevScore + 10); // Incrementamos la puntuación por emparejamiento
+            } else {
+                setScore(prevScore => prevScore - 5); // Penalizamos por emparejamiento incorrecto
             }
             setTimeout(() => setFlipped([]), 1000);
         }
