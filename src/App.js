@@ -9,9 +9,11 @@ const App = () => {
     const [accumulatedScore, setAccumulatedScore] = useState(0);
 
     const handleRestart = () => {
-        setGameKey(gameKey + 1);
-        setScore(0);
-        setAccumulatedScore(accumulatedScore + score);
+        setTimeout(() => {
+            setGameKey(gameKey + 1);
+            setScore(0);
+            setAccumulatedScore(accumulatedScore + score);
+        }, 2000);
     };
 
     return (

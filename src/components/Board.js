@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
+import categories from '../categories'; // Importar categorías
 
 const fetchCatImages = async (count) => {
-    const categories = ['cat', 'dog', 'baby cat', 'baby dog', 'funny cat'];
     const category = categories[Math.floor(Math.random() * categories.length)];
     const response = await fetch(`https://api.pexels.com/v1/search?query=${category}&per_page=${count}`, {
         headers: {

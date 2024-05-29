@@ -2,18 +2,17 @@
 
 ## Descripción
 
-Este proyecto es un juego de emparejamiento de imágenes desarrollado con React. El objetivo del juego es emparejar todas las cartas en el menor tiempo posible y con la mayor puntuación. A medida que el jugador avanza en el juego, la dificultad incrementa agregando más cartas y diversificando las imágenes. La aplicación también es una Progressive Web App (PWA), lo que permite a los usuarios instalarla y usarla sin conexión.
+Este proyecto es un juego de emparejamiento de imágenes desarrollado con React. El objetivo del juego es emparejar todas las cartas en el menor tiempo posible y con la mayor puntuación. La aplicación también es una Progressive Web App (PWA), lo que permite a los usuarios instalarla y usarla sin conexión.
 
 ## Características
 
 - **Sistema de Puntuación:** Otorga puntos por cada emparejamiento correcto y penaliza por emparejamientos incorrectos.
-- **Temporizador:** Limita el tiempo para completar el juego y añade presión al jugador.
-- **Incremento de Dificultad:** Aumenta el número de cartas a medida que se completan los niveles.
+- **Puntuación Acumulada:** Acumula la puntuación a lo largo de las partidas.
 - **Diversificación de Imágenes:** Utiliza la API de Pexels para obtener imágenes aleatorias de diferentes categorías.
 - **Transiciones Suaves:** Añade transiciones suaves al voltear las cartas.
 - **Efectos Visuales:** Añade efectos visuales cuando las cartas se emparejan.
-- **Modal de Confirmación:** Pregunta al jugador si desea continuar el juego con mayor dificultad o reiniciarlo.
 - **PWA:** La aplicación puede ser instalada y utilizada sin conexión.
+- **Fuente Roboto:** Utiliza la fuente Roboto para una mejor apariencia.
 
 ## Requisitos
 
@@ -54,6 +53,31 @@ Este proyecto es un juego de emparejamiento de imágenes desarrollado con React.
     npm install -g serve
     serve -s build
     ```
+
+
+## Estructura del Proyecto
+
+```plaintext
+matching-game/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Card.js
+│   │   ├── Board.js
+│   │   └── Scoreboard.js
+│   ├── css/
+│   │   └── styles.css
+│   ├── pwa/
+│   │   └── serviceWorkerRegistration.js
+│   ├── App.js
+│   ├── categories.js
+│   ├── index.js
+│   └── manifest.json
+├── .gitignore
+├── package.json
+└── README.md
+```
 
 ## API
 

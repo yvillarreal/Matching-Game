@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
   width: 300px;
   margin-bottom: 20px;
   font-size: 18px;
+  text-align: center !important; /* Centrar el texto */
 }
 
 .board {
