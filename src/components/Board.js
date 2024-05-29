@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from './Card';
 
 const fetchCatImages = async (count) => {
-    const categories = ['cat', 'dog', 'nature', 'city'];
+    const categories = ['cat', 'dog', 'baby cat', 'baby dog', 'funny cat'];
     const category = categories[Math.floor(Math.random() * categories.length)];
     const response = await fetch(`https://api.pexels.com/v1/search?query=${category}&per_page=${count}`, {
         headers: {
@@ -13,7 +13,7 @@ const fetchCatImages = async (count) => {
     return data.photos.map(photo => photo.src.medium);
 };
 
-const Board = ({ numImages, onEndGame, setScore }) => {
+const Board = ({ numImages, setScore, onEndGame }) => {
     const [cards, setCards] = useState([]);
     const [flipped, setFlipped] = useState([]);
     const [matched, setMatched] = useState([]);

@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto es un juego de emparejamiento de imágenes desarrollado con React. El objetivo del juego es emparejar todas las cartas en el menor tiempo posible y con la mayor puntuación. A medida que el jugador avanza en el juego, la dificultad incrementa agregando más cartas y diversificando las imágenes.
+Este proyecto es un juego de emparejamiento de imágenes desarrollado con React. El objetivo del juego es emparejar todas las cartas en el menor tiempo posible y con la mayor puntuación. A medida que el jugador avanza en el juego, la dificultad incrementa agregando más cartas y diversificando las imágenes. La aplicación también es una Progressive Web App (PWA), lo que permite a los usuarios instalarla y usarla sin conexión.
 
 ## Características
 
@@ -13,6 +13,7 @@ Este proyecto es un juego de emparejamiento de imágenes desarrollado con React.
 - **Transiciones Suaves:** Añade transiciones suaves al voltear las cartas.
 - **Efectos Visuales:** Añade efectos visuales cuando las cartas se emparejan.
 - **Modal de Confirmación:** Pregunta al jugador si desea continuar el juego con mayor dificultad o reiniciarlo.
+- **PWA:** La aplicación puede ser instalada y utilizada sin conexión.
 
 ## Requisitos
 
@@ -42,45 +43,25 @@ Este proyecto es un juego de emparejamiento de imágenes desarrollado con React.
     ```
 2. Abre tu navegador y navega a `http://localhost:3000`.
 
-## Estructura del Proyecto
+## Construcción para Producción
 
-```plaintext
-matching-game/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Card.js
-│   │   ├── Board.js
-│   │   ├── Modal.js
-│   │   └── Scoreboard.js
-│   ├── App.js
-│   ├── index.js
-│   └── styles.css
-├── .gitignore
-├── package.json
-└── README.md
-```
+1. Construye la aplicación para producción:
+    ```bash
+    npm run build
+    ```
+2. Sirve la carpeta `build` utilizando un servidor estático:
+    ```bash
+    npm install -g serve
+    serve -s build
+    ```
 
 ## API
-Este proyecto utiliza la API de Pexels para obtener imágenes aleatorias. Asegúrate de tener un token de API de Pexels y configúralo en el archivo `src/components/Board.js.`
-```plaintext
+
+Este proyecto utiliza la API de Pexels para obtener imágenes aleatorias. Asegúrate de tener un token de API de Pexels y configúralo en el archivo `src/components/Board.js`.
+
+```javascript
 const response = await fetch(`https://api.pexels.com/v1/search?query=cat&per_page=${count}`, {
   headers: {
     Authorization: 'YOUR_API_KEY_HERE'
   }
 });
-```
-
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor sigue los siguientes pasos:
-
-1. Haz un fork del proyecto.
-2. Crea una nueva rama (feature/nueva-funcionalidad).
-3. Realiza los cambios y haz commit.
-4. Envía un pull request.
-
-
-## Licencia
-Este proyecto está licenciado bajo la MIT License.
