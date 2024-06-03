@@ -20,7 +20,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Navbar />
+            {/*<Navbar />*/}
             <h1>Matching Game</h1>
             <Scoreboard score={score} accumulatedScore={accumulatedScore} />
             <Board
@@ -28,7 +28,7 @@ const App = () => {
                 numImages={numImages}
                 setScore={setScore}
                 onEndGame={handleRestart}/>
-            <About />
+            {/*<About />*/}
             <footer>
                 Build with ❤ by Yamil for my daughter Zoe
             </footer>
