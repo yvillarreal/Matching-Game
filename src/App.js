@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Board from './components/Board';
 import Scoreboard from './components/Scoreboard';
+import Navbar from './components/Navbar'; // Importar Navbar
+import About from './components/About'; // Importar About
 
 const App = () => {
     const [numImages] = useState(4);
@@ -18,14 +20,18 @@ const App = () => {
 
     return (
         <div className="App">
+            <Navbar />
             <h1>Matching Game</h1>
             <Scoreboard score={score} accumulatedScore={accumulatedScore} />
             <Board
                 key={gameKey}
                 numImages={numImages}
                 setScore={setScore}
-                onEndGame={handleRestart}
-            />
+                onEndGame={handleRestart}/>
+            <About />
+            <footer>
+                Build with ❤ by Yamil for my daughter Zoe
+            </footer>
         </div>
     );
 };
