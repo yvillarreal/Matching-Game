@@ -60,7 +60,11 @@ Este proyecto es un juego de emparejamiento de imágenes desarrollado con React.
 ```plaintext
 matching-game/
 ├── public/
-│   └── index.html
+│   ├── favicon2.ico
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── index.html
+│   └── manifest.json
 ├── src/
 │   ├── components/
 │   │   ├── Card.js
@@ -73,7 +77,6 @@ matching-game/
 │   ├── App.js
 │   ├── categories.js
 │   ├── index.js
-│   └── manifest.json
 ├── .gitignore
 ├── package.json
 └── README.md

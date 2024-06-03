@@ -6,7 +6,7 @@ const fetchCatImages = async (count) => {
     const category = categories[Math.floor(Math.random() * categories.length)];
     const response = await fetch(`https://api.pexels.com/v1/search?query=${category}&per_page=${count}`, {
         headers: {
-            Authorization: 'iK5NvDLyZmmtOCkdSyujIel8g8LmKIRKRdSPZKiE2o2OqXvcrmW4mZ9u'
+            Authorization: '${{ secrets.TOKER_PEXELS }}'
         }
     });
     const data = await response.json();
